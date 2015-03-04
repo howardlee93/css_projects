@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> CSS Animation</title> <!--eyeball-->
+	<style>
+
+	body {
+  		width: 300px;
+  		margin: 20px auto;
+		}
+
+	.circle {
+  		display: block;
+  		background: red;
+  		border-radius: 50%;
+  		height: 300px;
+  		width: 300px;
+  		margin: 0;
+  		animation: colors 5s;
+  		-webkit-animation: colors 5s;
+			position: relative;
+			animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			transform:scaleX(2);
+			-webkit-transform:scaleX(2);
+    		  		transition: height 2s;
+  		-webkit-transition: height 2s;
+
+		}
+
+	.circle:hover{
+		animation-play-state: paused;
+		-webkit-animation-play-state: paused;
+		/*transform: translateX(100deg);
+		-webkit-transform: translateX(100deg);
+		transform-origin:20% 50%;
+		-webkit-transform-origin:20% 50%;*/
+
+		}
+
+	.circle:active{
+		height: 600px;
+		transform:rotateZ(10deg);
+    	-webkit-transform:rotateZ(10deg);
+		perspective-origin: 25% 75%;
+		-webkit-perspective-origin: 25% 75%;
+
+	}
+
+
+
+	@keyframes colors{
+		0% {background:red;
+			left: 0px;
+			top: 0px;
+			}
+		33%{background: blue;
+			left:300px;
+			top:0px;
+			}
+		66%{background: green;
+			left: 300px;
+			top: 300px;
+			}
+		100% {background:red;
+			left: 0px;
+			top: 0px;
+			}
+	}
+
+@-webkit-keyframes colors{
+		0% {background:red;
+			left: 0px;
+			top: 0px;
+			}
+		33%{background: blue;
+			left:300px;
+			top:0px;
+			}
+		66%{background: green;
+			left: 300px;
+			top: 300px;
+			}
+		100% {background:red;
+			left: 0px;
+			top: 0px;
+			}
+	}
+
+
+	</style>
+</head>
+<body>
+	<figure class="circle"></figure>
+
+
+
+
+</body>
+</html>
